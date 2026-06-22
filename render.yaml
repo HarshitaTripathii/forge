@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: forge2-kanban-api
+    runtime: docker
+    plan: free
+    rootDir: api
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /tmp/forge2.sqlite
+      - key: FRONTEND_URL
+        sync: false

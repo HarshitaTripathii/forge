@@ -1,0 +1,13 @@
+SLACK_APP_TOKEN=xapp-your-token
+SLACK_BOT_TOKEN=xoxb-your-token
+SPRINT_MAIN_CHANNEL_ID=C-your-sprint-main
+AGENT_CODER_CHANNEL_ID=C-your-agent-coder
+AGENT_LOG_CHANNEL_ID=C-your-agent-log
+
+GEMINI_API_KEY=your-gemini-key
+GROQ_API_KEY=your-groq-key
+
+HERMES_MODEL_PROVIDER=gemini
+HERMES_MODEL=gemini-2.5-flash
+OPENCLAW_MODEL_PROVIDER=groq
+OPENCLAW_MODEL=llama-3.3-70b-versatile

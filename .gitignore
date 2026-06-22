@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+node_modules/
+dist/
+vendor/
+
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.local.env
+
+database/*.sqlite
+api/storage/*.key
+api/storage/logs/*.log
+api/bootstrap/cache/*.php
