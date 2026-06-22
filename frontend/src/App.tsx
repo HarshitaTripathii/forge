@@ -97,7 +97,7 @@ export function App() {
     if (apiState === 'online') {
       const response = await fetch(`${API_BASE}/tasks`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify(draft),
       })
       if (response.ok) {
@@ -120,7 +120,7 @@ export function App() {
     if (apiState === 'online') {
       await fetch(`${API_BASE}/tasks/${task.id}`, {
         method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
       })
     }
