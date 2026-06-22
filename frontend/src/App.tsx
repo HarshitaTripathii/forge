@@ -13,7 +13,11 @@ type Task = {
   created_at?: string
 }
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000/api'
+const configuredApiBase = import.meta.env.VITE_API_BASE_URL
+const API_BASE =
+  configuredApiBase && !configuredApiBase.includes('YOUR-RENDER-URL')
+    ? configuredApiBase
+    : 'https://forge2-kanban-api-46xu.onrender.com/api'
 
 const fallbackTasks: Task[] = [
   {
